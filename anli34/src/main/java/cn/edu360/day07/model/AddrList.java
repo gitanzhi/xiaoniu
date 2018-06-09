@@ -1,5 +1,7 @@
 package cn.edu360.day07.model;
-
+/*
+* 哈哈哈
+*/
 public class AddrList {
 	
 	private String name;
