@@ -18,7 +18,7 @@ import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Demo {
+public class Session {
 	public static void main(String[] args) {
 		
 		HashMap<String, List<SessionBean>> sessionMap = new HashMap<>();//相同session的数据

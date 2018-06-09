@@ -7,7 +7,7 @@ import org.apache.commons.httpclient.HttpException;
 import org.apache.commons.httpclient.HttpMethod;
 import org.apache.commons.httpclient.methods.GetMethod;
 
-public class Demo {
+public class TestHttpClient {
 	public static void main(String[] args) throws Exception {
 		String url = "http://www.edu360.cn";
 		HttpClient client = new HttpClient();

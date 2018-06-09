@@ -1,4 +1,4 @@
-package cn.edu360.day07.model;
+package cn.edu360.day07;
 /**
  * 封装单车数据
  * @author Administrator

@@ -23,7 +23,7 @@ public class Repository {
 					Double latitude = Double.parseDouble(split[3]);//纬度
 					String city = split[5];//省
 					String district = split[7];//区
-					String geoHash = Util.getGeoHash(latitude, longitude);
+					String geoHash = GeoHashUtils.getGeoHash(latitude, longitude);
 					String ret = geoHash+"\t"+"北京市"+"\t"+city+"\t"+district+"\t"+addr;
 					System.out.println(ret);
 					bw.write(ret);

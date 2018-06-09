@@ -14,11 +14,7 @@ import org.apache.commons.httpclient.methods.GetMethod;
 
 import com.alibaba.fastjson.JSON;
 
-import cn.edu360.day07.model.AddrList;
-import cn.edu360.day07.model.BikeBean;
-import cn.edu360.day07.model.ResultBean;
-
-public class Demo {
+public class GeoHash {
 	
 	static Map<String, String> map = null;
 	
@@ -55,7 +51,7 @@ public class Demo {
 	private static String findAddrByNet(double latitude, double longitude) {
 		String json = getJsonByNet(latitude,longitude);
 		ResultBean resultBean = JSON.parseObject(json, ResultBean.class);
-		String hash = Util.getGeoHash(latitude, longitude);
+		String hash = GeoHashUtils.getGeoHash(latitude, longitude);
 		AddrList addList = resultBean.getAddrList()[0];
 		String provinceCity = addList.getAdmName();
 		String[] split = provinceCity.split(",");
@@ -92,7 +88,7 @@ public class Demo {
 	}
 
 	private static String findAddrByLocal(double latitude, double longitude) {
-		String hash = Util.getGeoHash(latitude, longitude);
+		String hash = GeoHashUtils.getGeoHash(latitude, longitude);
 		String ret = map.get(hash);
 		return ret;
 	}

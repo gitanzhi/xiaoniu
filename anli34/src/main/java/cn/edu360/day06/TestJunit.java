@@ -2,7 +2,7 @@ package cn.edu360.day06;
 
 import org.junit.Before;
 
-public class Test {
+public class TestJunit {
 	public static void main(String[] args) {
 		System.out.println("-----main");
 	}
@@ -21,7 +21,7 @@ public class Test {
 	public void testJunit(){
 		System.out.println("------test");
 		String line = "163.177.71.12 - - [18/Sep/2013:06:49:36 +0000] ";
-		String dataByRegex = Demo.getDataByRegex(line, "(\\d+\\.){3}\\d+");
+		String dataByRegex = Session.getDataByRegex(line, "(\\d+\\.){3}\\d+");
 		if("163.177.71.12".equals(dataByRegex)){
 			System.out.println("ok");
 		}else{

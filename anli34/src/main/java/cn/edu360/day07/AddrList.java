@@ -1,4 +1,4 @@
-package cn.edu360.day07.model;
+package cn.edu360.day07;
 /*
 * 哈哈哈
 */
