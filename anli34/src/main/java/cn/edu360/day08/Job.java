@@ -20,36 +20,6 @@ public class Job {
 		
 		testMyMethod(url);		
 	}
-	
-	private static void testTeacherMethod(String url) throws Exception{
-		Document document = getDocumentByUrl(url);
-		PageBean page = new PageBean();
-		
-		page.setDocument(document);
-		long start = System.currentTimeMillis();
-		int sum = 1;
-		BufferedWriter bw = new BufferedWriter(new FileWriter("D:\\java\\data\\day08result.txt"));
-		while(true){
-			sum++;
-			List<JobBean> jobsByPage = getJobsByPage(page);
-			getNextPageUrl(page);
-			for (JobBean jobBean : jobsByPage) {
-				bw.write(jobBean.toString());
-				bw.newLine();
-				bw.flush();
-			}
-			System.out.println("-------------"+sum+"-------------");
-			if(page.getHasNextPage()){
-				document = getDocumentByUrl(page.getNextPageUrl());
-				page.setDocument(document);
-			}else{
-				break;
-			}
-		}
-		bw.close();
-		long end = System.currentTimeMillis();
-		System.out.println(end-start);//62146 45025 40893 40002
-	}
 
 	/**
 	 * @param url
