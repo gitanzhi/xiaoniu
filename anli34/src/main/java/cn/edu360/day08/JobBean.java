@@ -67,8 +67,8 @@ public class JobBean {
 
 	@Override
 	public String toString() {
-		return "JobBean [jobName=" + jobName + ", comName=" + comName + ", addr=" + addr + ", salary=" + salary
-				+ ", date=" + date + "]";
+		return "jobName:" + jobName + ", comName:" + comName + ", addr:" + addr + ", salary:" + salary
+				+ ", date:" + date;
 	}
 	
 	

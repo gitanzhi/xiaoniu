@@ -2,7 +2,8 @@ package cn.edu360.day08;
 
 import org.jsoup.nodes.Document;
 
-public class Page {
+public class PageBean {
+	
 	private Document document;
 	
 	private String nextPageUrl;
@@ -35,7 +36,7 @@ public class Page {
 
 	@Override
 	public String toString() {
-		return "Page [document=" + document + ", nextPageUrl=" + nextPageUrl + ", hasNextPage=" + hasNextPage + "]";
+		return "document=" + document + ", nextPageUrl=" + nextPageUrl + ", hasNextPage=" + hasNextPage;
 	}
 	
 	
